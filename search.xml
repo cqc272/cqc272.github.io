@@ -102,9 +102,7 @@
 <h3 id="文件结构示意"><a href="#文件结构示意" class="headerlink" title="文件结构示意"></a>文件结构示意</h3><figure class="highlight text"><table><tr><td class="code"><pre><code class="hljs text">/workspace<br>├── scripts/         # 主程序<br>├── model/           # 模型权重或定义<br>├── param/           # 参数配置<br>├── utils/           # 工具函数<br>└── point_cloud/     # 输出点云数据<br></code></pre></td></tr></table></figure>
 
 <hr>
-<h3 id="Dockerfile-构建流程图（Mermaid）"><a href="#Dockerfile-构建流程图（Mermaid）" class="headerlink" title="Dockerfile 构建流程图（Mermaid）"></a>Dockerfile 构建流程图（Mermaid）</h3><div align="center">
-
-<pre><code class=" mermaid">flowchart TD
+<h3 id="Dockerfile-构建流程图（Mermaid）"><a href="#Dockerfile-构建流程图（Mermaid）" class="headerlink" title="Dockerfile 构建流程图（Mermaid）"></a>Dockerfile 构建流程图（Mermaid）</h3><pre><code class=" mermaid">flowchart TD
     A[FROM 镜像] --&gt; B[安装系统依赖]
     B --&gt; C[创建普通用户]
     C --&gt; D[构建 Conda 环境]
@@ -114,8 +112,6 @@
     G --&gt; H[设置默认环境激活]
 </code></pre>
 
-</div>
-
 <hr>
 ]]></content>
       <categories>
@@ -124,15 +120,6 @@
       <tags>
         <tag>conda</tag>
         <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第一篇测试文章</title>
-    <url>/2025/04/08/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>正文</p>
-]]></content>
-      <tags>
-        <tag>测试</tag>
       </tags>
   </entry>
   <entry>
@@ -152,5 +139,14 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>第一篇测试文章</title>
+    <url>/2025/04/08/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>正文</p>
+]]></content>
+      <tags>
+        <tag>测试</tag>
+      </tags>
   </entry>
 </search>

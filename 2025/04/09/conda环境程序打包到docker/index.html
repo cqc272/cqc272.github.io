@@ -27,7 +27,7 @@
 <meta property="og:description" content="导出当前的conda环境依赖12conda activate env-nameconda env export --no-builds &gt; environment.yml   准备项目目录如下123456789your_project&#x2F;├── model&#x2F;├── param&#x2F;├── point_cloud&#x2F;           ← 点云保存目录（需挂载）├── scripts&#x2F;│   └──">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-04-09T10:26:40.000Z">
-<meta property="article:modified_time" content="2025-04-09T19:15:46.720Z">
+<meta property="article:modified_time" content="2025-04-09T19:20:12.718Z">
 <meta property="article:author" content="ChenQiuCai">
 <meta property="article:tag" content="conda">
 <meta property="article:tag" content="docker">
@@ -376,9 +376,7 @@
 <h3 id="文件结构示意"><a href="#文件结构示意" class="headerlink" title="文件结构示意"></a>文件结构示意</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text">/workspace<br>├── scripts/         # 主程序<br>├── model/           # 模型权重或定义<br>├── param/           # 参数配置<br>├── utils/           # 工具函数<br>└── point_cloud/     # 输出点云数据<br></code></pre></td></tr></table></figure>
 
 <hr>
-<h3 id="Dockerfile-构建流程图（Mermaid）"><a href="#Dockerfile-构建流程图（Mermaid）" class="headerlink" title="Dockerfile 构建流程图（Mermaid）"></a>Dockerfile 构建流程图（Mermaid）</h3><div align="center">
-
-<pre><code class=" mermaid">flowchart TD
+<h3 id="Dockerfile-构建流程图（Mermaid）"><a href="#Dockerfile-构建流程图（Mermaid）" class="headerlink" title="Dockerfile 构建流程图（Mermaid）"></a>Dockerfile 构建流程图（Mermaid）</h3><pre><code class=" mermaid">flowchart TD
     A[FROM 镜像] --&gt; B[安装系统依赖]
     B --&gt; C[创建普通用户]
     C --&gt; D[构建 Conda 环境]
@@ -387,8 +385,6 @@
     F --&gt; G[切换用户]
     G --&gt; H[设置默认环境激活]
 </code></pre>
-
-</div>
 
 <hr>
 
