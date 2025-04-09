@@ -102,7 +102,8 @@
 <h3 id="文件结构示意"><a href="#文件结构示意" class="headerlink" title="文件结构示意"></a>文件结构示意</h3><figure class="highlight text"><table><tr><td class="code"><pre><code class="hljs text">/workspace<br>├── scripts/         # 主程序<br>├── model/           # 模型权重或定义<br>├── param/           # 参数配置<br>├── utils/           # 工具函数<br>└── point_cloud/     # 输出点云数据<br></code></pre></td></tr></table></figure>
 
 <hr>
-<h3 id="Dockerfile-构建流程图（Mermaid）"><a href="#Dockerfile-构建流程图（Mermaid）" class="headerlink" title="Dockerfile 构建流程图（Mermaid）"></a>Dockerfile 构建流程图（Mermaid）</h3><div align="center">
+<h3 id="Dockerfile-构建流程图（Mermaid）"><a href="#Dockerfile-构建流程图（Mermaid）" class="headerlink" title="Dockerfile 构建流程图（Mermaid）"></a>Dockerfile 构建流程图（Mermaid）</h3><!-- markdownlint-disable MD033 -->
+<div align="center" style="zoom:1.2">
 
 <pre><code class=" mermaid">flowchart TD
     A[FROM 镜像] --&gt; B[安装系统依赖]
@@ -115,6 +116,7 @@
 </code></pre>
 
 </div>
+<!-- markdownlint-enable MD033 -->
 
 <hr>
 ]]></content>
