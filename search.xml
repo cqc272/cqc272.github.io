@@ -3,7 +3,14 @@
   <entry>
     <title>conda环境程序打包到docker</title>
     <url>/2025/04/09/conda%E7%8E%AF%E5%A2%83%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E5%88%B0docker/</url>
-    <content><![CDATA[<h3 id="导出当前的conda环境依赖"><a href="#导出当前的conda环境依赖" class="headerlink" title="导出当前的conda环境依赖"></a>导出当前的conda环境依赖</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">conda activate env-name<br>conda <span class="hljs-built_in">env</span> <span class="hljs-built_in">export</span> --no-builds &gt; environment.yaml<br></code></pre></td></tr></table></figure>
+    <content><![CDATA[<h3 id="导出当前的conda环境依赖"><a href="#导出当前的conda环境依赖" class="headerlink" title="导出当前的conda环境依赖"></a>导出当前的conda环境依赖</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">conda activate env-name<br>conda <span class="hljs-built_in">env</span> <span class="hljs-built_in">export</span> --no-builds &gt; environment.yml<br></code></pre></td></tr></table></figure>
+
+<h3 id="准备项目目录如下"><a href="#准备项目目录如下" class="headerlink" title="准备项目目录如下"></a>准备项目目录如下</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">your_project/<br>├── model/<br>├── param/<br>├── point_cloud/           ← 点云保存目录（需挂载）<br>├── scripts/<br>│   └── pipe_sim.py        ← 主程序入口<br>├── utils/<br>├── Dockerfile<br>└── pipe_sim_env.yml       ← Conda 环境配置<br></code></pre></td></tr></table></figure>
+
+<h3 id="编写Dockerfile文件的内容"><a href="#编写Dockerfile文件的内容" class="headerlink" title="编写Dockerfile文件的内容"></a>编写Dockerfile文件的内容</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">FROM pytorch/pytorch:2.5.1-cuda11.8-cudnn9-runtime<br></code></pre></td></tr></table></figure>
+
+<p><strong>FROM</strong>：定制的镜像都是基于 FROM 的镜像，这里的 pytorch&#x2F;pytorch:2.5.1-cuda11.8-cudnn9-runtime 就是定制需要的基础镜像，后面的操作都基于此。</p>
+<p>这个操作</p>
 ]]></content>
       <categories>
         <category>实用方法</category>
